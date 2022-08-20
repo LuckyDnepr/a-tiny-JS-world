@@ -49,26 +49,44 @@ footer {
     font-style: italic;
 }
 
+.name {
+    font-weight: bold;
+}
+
 .gender {
     text-decoration: underline;
 }
 
 .legs::before {
-    content: "legs = "
+    content: "legs: "
 }
 
 .hands::before {
-    content: "hands = "
+    content: "hands: "
 }
 
-.name {
-    font-weight: bold;
+.paws::before {
+    content: "paws: "
+}
+
+.say:before {
+    content: "saying: "
 }
 
 .friends {
     color:#68afe7;
 }
 
+.friends::before {
+    content: "friends: ";
+    color: black;
+}
+
 .enemies {
     color:crimson;
+}
+
+.enemies::before {
+    content: "enemies: ";
+    color: black;
 }
