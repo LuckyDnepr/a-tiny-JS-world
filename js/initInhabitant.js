@@ -5,13 +5,9 @@ import { Cat } from "./Classes/Cat.js";
 import { WomanCat } from "./Classes/WomanCat.js";
 
 export const initInhabitant = {
-    man: function (name, birthday, eyesColor, hairColor, height) {
-      const man = new Man(name, birthday);
-      man.appearance.eyesColor = eyesColor;
-      man.appearance.hairColor = hairColor;
-      man.appearance.height = height;
-      return man;
-    },
+    man: (name, birthday) => new Man(name, birthday),
+    woman: (name, birthday) => new Woman(name, birthday)
+    /* ,
     woman: function (name, birthday, eyesColor, hairColor, height, breastSize) {
       const woman = new Woman(name, birthday);
       woman.appearance.eyesColor = eyesColor;
@@ -39,5 +35,5 @@ export const initInhabitant = {
       womanCat.appearance.height = height;
       womanCat.appearance.breastSize = breastSize;
       return womanCat;
-    }
+    } */
   };

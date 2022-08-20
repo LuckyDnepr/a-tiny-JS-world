@@ -1,21 +1,18 @@
 import { SocialTies } from "./SocialTies.js";
-import { Appearance } from "./Appearance.js";
 import { Age } from "./Age.js";
 
 export class Inhabitant {
-    static saying () { //function for saying phrases from _vocabulary
-      return function (event) {
-          return this.vocabulary.hasOwnProperty(event)
-          ? this.vocabulary[event]
-          : "Nothing to say";
-        };
-      }
-    constructor(name, gender, birthday = new Date()) {
+    constructor(species, name, birthday = new Date()) {
+      this.species = species;
       this.name = name;
-      this.gender = gender;
       this.age = new Age(birthday);
-      this.friends = new SocialTies("Friends");
-      this.enemies = new SocialTies("Enemies");
-      this.appearance = new Appearance();
+    }
+    say(event) {
+      return this.vocabulary.hasOwnProperty(event)
+      ? this.vocabulary[event]
+      : "Nothing to say";
+    };
+    getInfo () {
+      return `I'm ${this.name}. I'm ${this.age.getAge()} y.o. member of race ${this.species}.`;
     }
   }

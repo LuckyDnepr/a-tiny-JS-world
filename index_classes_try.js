@@ -2,15 +2,22 @@
 
 import { initInhabitant } from "./js/initInhabitant.js";
 import { inhabitantResume, getPrintableInhabitantInfo } from "./js/introduceInhabitant.js";
-
+/*
 const inhabitants = { //object for presentation
     woman: initInhabitant.woman ("Jinny", "03 13 2003", "celestial", "blonde", "172 cm", "B"),
     man: initInhabitant.man ("Billy", "05 24 2001", "blue", "brown", "175 cm"),
     cat: initInhabitant.cat ("Starling", "female", "05 05 2020", "British", "grey"),
     dog: initInhabitant.dog ("Oscar", "male", "06 01 2018", "Dalmatian", "black and white spotted"),
     womanCat: initInhabitant.womanCat ("Mary", "06 13 2000", "blue", "brown", "174 cm", "C")
-  };
+  }; */
 
+const man = initInhabitant.man ("Billy", "05 24 2001");
+
+console.log(man.getInfo());
+
+const woman = initInhabitant.woman ("Jinny", "03 13 2003");
+console.log(woman.getInfo());
+/*
 setFriends(); //set some friend for inhabitants
 setEnemies(); //set some enemies for inhabitants
 
@@ -40,3 +47,4 @@ function printAllInhabitantsInfo(inhabitants) { //function for presentation
   }
   return printableInfo + "\n" + printableResume;
 }
+ */
